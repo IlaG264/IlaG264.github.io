@@ -7,10 +7,39 @@
 				margin: 50;
 				overflow: hidden;
 			}
+			#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+#navbar button{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 100px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 		</style>
 	</head>
 	<body>
 		<div style="text-align:center">
 			<h1 style="font-family:rockwell">🌼 Ila's Website 🌼</h1> </div>
+		<div id= "NavBar">
+			<button class= "NavButton" onclick="location.href='index.html';"<b>Home</b></button>
+			<button class= "NavButton" onclick="location.href='Porfolio.html';"<b>Porfolio</b></button>
+			<button class= "NavButton" onclick="location.href='AboutMe.html';"<b>About Me</b></button>
 	</body>
 </html>
