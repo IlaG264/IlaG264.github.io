@@ -7,10 +7,19 @@
 				margin: 50;
 				overflow: hidden;
 			}
+			#header {
+				position: sticky;
+				top:0
+				left:0
+				width: 100%
+				z-index: 100%
+				backround-color: #CDF0F2
+			}
+				
 
-			#NavButton {
+			.NavButton {
   				overflow: hidden;
-  				background-color: #333;
+  				background-color: #CDF0F2;
 			}
 #NavBar {
 	display: flex;
@@ -22,18 +31,7 @@
 
 }
 
-.content {
-  padding: 100px;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 
-.sticky + .content {
-  padding-top: 60px;
-}
 		</style>
 	</head>
 	<body>
