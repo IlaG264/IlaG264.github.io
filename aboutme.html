@@ -70,8 +70,8 @@
     .prev, .next {
       position: absolute;
       top: 50%;
+      transform: translateY(-50%);
       width: auto;
-      margin-top: -30px;
       padding: 16px;
       color: #fff;
       font-weight: bold;
@@ -105,21 +105,122 @@
   </div>
 
   <div id="slideshow-container">
+    <!-- Add your About Me content here -->
+    <p><!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    body {
+      background-color: #A7C7E7;
+      font-family: Verdana;
+    }
+
+    .NavButton {
+      overflow: hidden;
+      background-color: #CAF0F8;
+      margin: 20px;
+      width: 15%;
+      font-size: 20px;
+      border: 0px solid blue;
+      border-radius: 10px;
+    }
+
+    #NavBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #header {
+      margin-top: 20px;
+    }
+
+    #welcomeText {
+      font-family: Verdana;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #slideshow-container {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 100%;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    /* Center the navigation arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 16px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* Add hover effect for arrow buttons */
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <br>
+
+  </div>
+ 
+
+  <div id="slideshow-container">
     <div class="slide">
       <img src="file:///Users/ilagowda/Downloads/IMG_5530.HEIC" alt="My Family">
-		
       <div class="caption">My Family</div>
     </div>
 
     <div class="slide">
       <img src="file:///Users/ilagowda/Downloads/File_000.jpeg" alt="My Friends">
-				<br>	<br>	<br>	<br>
       <div class="caption">My Friends</div>
     </div>
 
     <div class="slide">
       <img src="file:///Users/ilagowda/Downloads/PXL_20230311_232438508.jpg" alt="I do robotics!">
-				<br>	<br>	<br>	<br>
       <div class="caption">I do robotics!</div>
     </div>
 
@@ -163,4 +264,7 @@
   </script>
 </body>
 </html>
-
+</p>
+  </div>
+</body>
+</html>
