@@ -12,6 +12,26 @@
 				font-family: Verdana;
 			}
 
+			.NavButton {
+				overflow: hidden;
+				background-color: #CAF0F8;
+				margin: 20px;
+				width: 15%;
+				font-size: 20px;
+				border: 0px solid blue;
+				border-radius: 10px;
+			}
+		
+			#NavBar {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			#header {
+				margin-top: 20px;
+			}
+
 			/* Add the following styles for the portfolio header */
 			#portfolioHeader {
 				font-family: Verdana;
@@ -19,15 +39,38 @@
 				font-size: 24px;
 				margin-top: 20px;
 				color: #000; /* Change the color as needed */
+				display: none; /* Initially hide the portfolio content */
 			}
 		</style>
+
+		<!-- Add JavaScript to toggle visibility -->
+		<script>
+			function showPortfolio() {
+				// Hide welcome text if it exists
+				var welcomeText = document.getElementById("welcomeText");
+				if (welcomeText) {
+					welcomeText.style.display = "none";
+				}
+				// Show portfolio content
+				document.getElementById("portfolioHeader").style.display = "block";
+			}
+		</script>
 	</head>
 	<body>
+		<div id="header">
+			<br>
+			<h1 style="font-family: rockwell">🌼 Ila's Website 🌼</h1>
+		</div>
+		<div id="NavBar">
+			<button class="NavButton" onclick="location.href='index.html';"><b>Home</b></button>
+			<button class="NavButton" onclick="showPortfolio();"><b>Portfolio</b></button>
+			<button class="NavButton" onclick="location.href='AboutMe.html';"><b>About Me</b></button>
+		</div>
+
+		<!-- Portfolio content -->
 		<div id="portfolioHeader">
 			Welcome to my Portfolio!
 		</div>
-
-		<!-- The rest of your portfolio content -->
-		<!-- ... -->
 	</body>
 </html>
+
