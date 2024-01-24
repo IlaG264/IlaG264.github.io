@@ -1,35 +1,166 @@
-<!doctype html>
-	<html lang="en">
-	  <head>
-	    <meta charset="utf-8">
-	    <title>About Me</title>
-	  </head>
-	  <body bgcolor="#A7C7E7">
-    <center>
-    <h1>This is my family!</h1>
-     <img src=file:///H:/Chrome%20Downloads/62B662ED-7616-48F0-B90B-608AA1C3CB2B.JPG height="300">
-    <h3>My family on a trip to Alaska</h3>
-      <img src="images/Elwyn_wk1.jpg" height="300">
-      <img src="images/Bearhat.jpg" height="300">
-      <img src="images/Warrior_princess.jpg" height="300">
-      <br> 
-    <h3>Now seven</h3>
-      <img src="images/Ellieonbridge.jpg" height="400">
-      <br>
-    <h3>Tighe</h3>
-      <img src="images/Grandmaatbeach.jpg" height="300">
-      <img src="images/Tighedrinking.jpg" height="300">
-      <br>
-      <img src="images/Grankidsandbigbird.jpg" height="300">
-      <img src="images/Grandkidsbeach.jpg" height="300">
-      <br>
-    <h3>Bailey</h3>
-      <img src="images/Bailey.jpg" height="300">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    body {
+      background-color: #A7C7E7;
+      font-family: Verdana;
+    }
+
+    .NavButton {
+      overflow: hidden;
+      background-color: #CAF0F8;
+      margin: 20px;
+      width: 15%;
+      font-size: 20px;
+      border: 0px solid blue;
+      border-radius: 10px;
+    }
+
+    #NavBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #header {
+      margin-top: 20px;
+    }
+
+    #welcomeText {
+      font-family: Verdana;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #slideshow-container {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 100%;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    /* Center the navigation arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* Add hover effect for arrow buttons */
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
     <br>
-    <h2>   and my Nieces!</h2>
-    <img src="images/supergirls.jpg" height="300">
-    <br>
-    </center>
-    </a>
-	  </body>
-	</html>
+    <h1 style="font-family: rockwell">🌼 Ila's Website 🌼</h1>
+  </div>
+  <div id="NavBar">
+    <button class="NavButton" onclick="location.href='index.html';"><b>Home</b></button>
+    <button class="NavButton" onclick="location.href='Portfolio.html';"><b>Portfolio</b></button>
+    <button class="NavButton" onclick="location.href='AboutMe.html';"><b>About Me</b></button>
+  </div>
+
+  <div id="slideshow-container">
+    <div class="slide">
+      <img src="file:///Users/ilagowda/Downloads/IMG_5530.HEIC" alt="My Family">
+		
+      <div class="caption">My Family</div>
+    </div>
+
+    <div class="slide">
+      <img src="file:///Users/ilagowda/Downloads/File_000.jpeg" alt="My Friends">
+				<br>	<br>	<br>	<br>
+      <div class="caption">My Friends</div>
+    </div>
+
+    <div class="slide">
+      <img src="file:///Users/ilagowda/Downloads/PXL_20230311_232438508.jpg" alt="I do robotics!">
+				<br>	<br>	<br>	<br>
+      <div class="caption">I do robotics!</div>
+    </div>
+
+    <!-- Add more slides as needed -->
+
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(n) {
+      const slides = document.getElementsByClassName("slide");
+      const captions = document.getElementsByClassName("caption");
+
+      if (n >= slides.length) {
+        currentSlide = 0;
+      } else if (n < 0) {
+        currentSlide = slides.length - 1;
+      } else {
+        currentSlide = n;
+      }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        captions[i].style.display = "none";
+      }
+
+      slides[currentSlide].style.display = "block";
+      captions[currentSlide].style.display = "block";
+    }
+
+    function changeSlide(n) {
+      showSlide(currentSlide += n);
+    }
+
+    // Initial display
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
+
