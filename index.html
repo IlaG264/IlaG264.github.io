@@ -11,7 +11,6 @@
 				background-color: #A7C7E7;
 				font-family: Verdana;
 			}
-				
 
 			.NavButton {
   				overflow: hidden;
@@ -23,40 +22,55 @@
 				border-radius: 10px;
 			}
 		
-#NavBar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+			#NavBar {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
-		
+			
+			#header {
+				margin-top: 20px;
+			}
+
+			/* Add the following styles for the welcome text */
+			#welcomeText {
+				font-family: Verdana;
+				font-size: 18px;
+				font-weight: bold;
+				margin-top: 10px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="header">
 			<br>
-			<h1 style="font-family:rockwell">🌼 Ila's Website 🌼  </h1> </div>
-		<div id= "NavBar">
-			<button class= "NavButton" onclick="location.href='index.html';"><b>Home</b></button>
-			<button class= "NavButton" onclick="location.href='Porfolio.html';"><b>Porfolio</b></button>
-			<button class= "NavButton" onclick="location.href='AboutMe.html';"><b>About Me</b></button> 
+			<h1 style="font-family: rockwell">🌼 Ila's Website 🌼</h1>
 		</div>
-	</body>
-	
-	<br><br><br>
-	<figure>
-	<img src = "https://www.travelandleisure.com/thmb/IIBEmIubzmP-HBJv4l_nPUQidUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/green-o-treehouse-montana_HERO_TREEHOUSE0822-219f8b36f0dd4421993eed3e8de274dc.jpg" width=550px height=550px>
-	<figcaption> My Dream House!</figcaption> 
-	</figure>
-		
-	<br><br><br><br>
-	<iframe 
-			style="border-radius:12px" 
+		<div id="NavBar">
+			<button class="NavButton" onclick="location.href='index.html';"><b>Home</b></button>
+			<button class="NavButton" onclick="location.href='Porfolio.html';"><b>Portfolio</b></button>
+			<button class="NavButton" onclick="location.href='AboutMe.html';"><b>About Me</b></button>
+		</div>
+
+		<!-- Add the following welcome text -->
+		<div id="welcomeText">
+			Hi! My name is Ila and welcome to my home!
+		</div>
+
+		<br>
+		<figure>
+			<img src="https://www.travelandleisure.com/thmb/IIBEmIubzmP-HBJv4l_nPUQidUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/green-o-treehouse-montana_HERO_TREEHOUSE0822-219f8b36f0dd4421993eed3e8de274dc.jpg" width="550px" height="550px">
+		</figure>
+
+		<br><br><br><br>
+		<iframe 
+			style="border-radius: 12px;" 
 			src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS?utm_source=generator" 
 			width="50%"
 			height="352"
-			frameBorder="0" 
+			frameborder="0" 
 			allowfullscreen="" 
-			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-	
-
+			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+			loading="lazy"></iframe>
+	</body>
 </html>
