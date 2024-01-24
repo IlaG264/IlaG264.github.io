@@ -32,8 +32,8 @@
 				margin-top: 20px;
 			}
 
-			/* Add the following styles for the portfolio header */
-			#portfolioHeader {
+			/* Add the following styles for the porfolio header */
+			#porfolioHeader {
 				font-family: Verdana;
 				font-weight: bold;
 				font-size: 24px;
@@ -45,14 +45,14 @@
 
 		<!-- Add JavaScript to toggle visibility -->
 		<script>
-			function showPortfolio() {
+			function showPorfolio() {
 				// Hide welcome text if it exists
 				var welcomeText = document.getElementById("welcomeText");
 				if (welcomeText) {
 					welcomeText.style.display = "none";
 				}
-				// Show portfolio content
-				document.getElementById("portfolioHeader").style.display = "block";
+				// Show porfolio content
+				document.getElementById("porfolioHeader").style.display = "block";
 			}
 		</script>
 	</head>
@@ -63,13 +63,13 @@
 		</div>
 		<div id="NavBar">
 			<button class="NavButton" onclick="location.href='index.html';"><b>Home</b></button>
-			<button class="NavButton" onclick="showPortfolio();"><b>Portfolio</b></button>
+			<button class="NavButton" onclick="showPorfolio();"><b>Porfolio</b></button>
 			<button class="NavButton" onclick="location.href='AboutMe.html';"><b>About Me</b></button>
 		</div>
 
-		<!-- Portfolio content -->
-		<div id="portfolioHeader">
-			Welcome to my Portfolio!
+		<!-- Porfolio content -->
+		<div id="porfolioHeader">
+			Welcome to my Porfolio!
 		</div>
 	</body>
 </html>
